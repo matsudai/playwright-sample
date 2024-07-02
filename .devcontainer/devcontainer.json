@@ -1,0 +1,14 @@
+{
+  "name": "Playwright",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "ms-playwright.playwright"]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "remoteUser": "pwuser"
+}
