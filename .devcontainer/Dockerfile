@@ -1,5 +1,5 @@
 # https://playwright.dev/python/docs/docker#pull-the-image
-FROM mcr.microsoft.com/playwright:v1.45.0-jammy
+FROM mcr.microsoft.com/playwright:v1.46.0-jammy
 
 #
 # 1. ディストリビューションの設定
@@ -28,6 +28,13 @@ ENV LANG ja_JP.UTF-8
 RUN apt update && \
     apt install -y vim curl wget git && \
     apt clean && rm -rf /var/lib/apt/lists/*
+#
+#     1.3. Playwright用のパッケージをインストールします。（Google Chrome）
+#
+RUN npx playwright install chrome
+# RUN cd /usr/local/src && \
+#     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+#     apt -y install ./google-chrome-stable_current_amd64.deb
 
 #
 # 2. アプリケーションの設定

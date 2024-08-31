@@ -11,12 +11,12 @@ npx playwright test --ui
 1. Compare
 
     ```sh
-    CI=true npx playwright test
+    CI=true npx playwright test --workers 4
     npx playwright show-report --host 0.0.0.0
     ```
 
 1. Update
 
     ```sh
-    npx playwright test --update-snapshots
+    CI=true npx playwright test --update-snapshots --workers 4
     ```

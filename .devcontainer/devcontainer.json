@@ -6,7 +6,7 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "ms-playwright.playwright"]
+      "extensions": ["esbenp.prettier-vscode", "ms-playwright.playwright"]
     }
   },
   "postCreateCommand": "npm install",
